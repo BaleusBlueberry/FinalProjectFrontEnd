@@ -4,7 +4,7 @@ import "./Navbar.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContex";
 import { AuthContext } from "../context/AuthContex";
-import { BiLogIn, BiLogOut } from "react-icons/bi";
+import { BiLogOut } from "react-icons/bi";
 
 //1) if the user is logged in: show the logout button
 //2) if the user is not logged in show register page and login

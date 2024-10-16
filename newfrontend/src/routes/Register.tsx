@@ -1,6 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
+import Spinner from "../components/Spinner";
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -44,7 +45,7 @@ const Register = () => {
       }}
     >
       <Form className="flex flex-col items-center">
-        {/* {isLoading && <Spinner title="WaitUp!" />} */}
+        {isLoading && <Spinner />}
         {error && <p className="text-red-500">{error}</p>}
         <div className="font-extralight form-group flex flex-col gap-2 w-1/2 mx-auto text-lg my-4">
           <label htmlFor="username">User Name</label>
@@ -54,11 +55,11 @@ const Register = () => {
             id="username"
             className="rounded-md hover:border-2 border-2 px-2 py-2"
           />
-          <ErrorMessage
+          {/* <ErrorMessage
             name="username"
             component="div"
             className="text-red-500"
-          />
+          /> */}
         </div>
 
         <div className="font-extralight form-group flex flex-col gap-2 w-1/2 mx-auto text-lg my-4">
@@ -69,7 +70,7 @@ const Register = () => {
             id="email"
             className="rounded-md hover:border-2 border-2 px-2 py-2"
           />
-          <ErrorMessage name="email" component="div" className="text-red-500" />
+          {/* <ErrorMessage name="email" component="div" className="text-red-500" /> */}
         </div>
 
         <div className="font-extralight form-group flex flex-col gap-2 w-1/2 mx-auto text-lg my-4">
@@ -80,11 +81,11 @@ const Register = () => {
             id="password"
             className="rounded-md hover:border-2 border-2 px-2 py-2"
           />
-          <ErrorMessage
+          {/* <ErrorMessage
             name="password"
             component="div"
             className="text-red-500"
-          />
+          /> */}
         </div>
 
         <div className="font-extralight form-group flex flex-col gap-2 w-1/2 mx-auto text-lg my-4">
@@ -95,11 +96,11 @@ const Register = () => {
             id="confirmPassword"
             className="rounded-md hover:border-2 border-2 px-2 py-2"
           />
-          <ErrorMessage
+          {/* <ErrorMessage
             name="confirmPassword"
             component="div"
             className="text-red-500"
-          />
+          /> */}
         </div>
 
         <button
