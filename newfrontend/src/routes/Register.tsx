@@ -1,7 +1,8 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Field, Form, Formik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
 import Spinner from "../components/Spinner";
+import { dialogs } from "../dialogs/dialogs";
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -35,7 +36,7 @@ const Register = () => {
       validationSchema={validationSchema}
       onSubmit={() => {
         setIsLoading(true);
-        // dialog.success("User Registered Successfully");
+        dialogs.success("Registered successfully!!!!");
 
         //async task
         setTimeout(() => {
